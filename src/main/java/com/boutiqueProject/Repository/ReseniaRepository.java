@@ -1,5 +1,5 @@
-package com.PruebaTecnica.PruebaTecnica.Repository;
-import com.PruebaTecnica.PruebaTecnica.Entity.Resenia;
+package com.boutiqueProject.Repository;
+import com.boutiqueProject.Entity.Resenia;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,4 +1,4 @@
-package com.PruebaTecnica.PruebaTecnica.Entity;
+package com.boutiqueProject.Entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

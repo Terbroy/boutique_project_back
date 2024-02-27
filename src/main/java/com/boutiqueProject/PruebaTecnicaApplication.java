@@ -1,4 +1,4 @@
-package com.PruebaTecnica.PruebaTecnica;
+package com.boutiqueProject;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

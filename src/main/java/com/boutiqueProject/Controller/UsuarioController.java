@@ -1,7 +1,7 @@
-package com.PruebaTecnica.PruebaTecnica.Controller;
+package com.boutiqueProject.Controller;
 
-import com.PruebaTecnica.PruebaTecnica.Entity.UsuarioEntity;
-import com.PruebaTecnica.PruebaTecnica.Repository.UsuarioRepositorory;
+import com.boutiqueProject.Entity.UsuarioEntity;
+import com.boutiqueProject.Repository.UsuarioRepositorory;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

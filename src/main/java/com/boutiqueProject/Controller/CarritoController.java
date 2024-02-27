@@ -1,7 +1,7 @@
-package com.PruebaTecnica.PruebaTecnica.Controller;
+package com.boutiqueProject.Controller;
 
-import com.PruebaTecnica.PruebaTecnica.Entity.Carrito;
-import com.PruebaTecnica.PruebaTecnica.Service.CarritoService;
+import com.boutiqueProject.Entity.Carrito;
+import com.boutiqueProject.Service.CarritoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

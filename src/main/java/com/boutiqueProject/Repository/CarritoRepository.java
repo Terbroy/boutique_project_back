@@ -1,6 +1,6 @@
-package com.PruebaTecnica.PruebaTecnica.Repository;
+package com.boutiqueProject.Repository;
 
-import com.PruebaTecnica.PruebaTecnica.Entity.Carrito;
+import com.boutiqueProject.Entity.Carrito;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

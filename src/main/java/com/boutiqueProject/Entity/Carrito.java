@@ -1,4 +1,4 @@
-package com.PruebaTecnica.PruebaTecnica.Entity;
+package com.boutiqueProject.Entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
