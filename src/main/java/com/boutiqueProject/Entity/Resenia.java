@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @Table (name = "resenia")
 public class Resenia {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY);
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id_resenia;
     private boolean calificacion;
     private String comentario;
