@@ -1,6 +1,7 @@
 package com.PruebaTecnica.PruebaTecnica.Controller;
 import com.PruebaTecnica.PruebaTecnica.Entity.Resenia;
 import com.PruebaTecnica.PruebaTecnica.Service.ReseniaService;
+import com.boutiqueProject.Entity.Resenia;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

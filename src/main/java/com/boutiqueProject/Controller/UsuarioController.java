@@ -1,7 +1,6 @@
 package com.boutiqueProject.Controller;
 
-import com.boutiqueProject.Entity.UsuarioEntity;
-import com.boutiqueProject.Repository.UsuarioRepositorory;
+import com.boutiqueProject.Repository.UsuarioRepository;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -12,9 +11,9 @@ import java.util.List;
 
 public class UsuarioController
 {
-    private final UsuarioRepositorory usuarioRepositorory;
+    private final UsuarioRepository usuarioRepositorory;
 
-    public UsuarioController(UsuarioRepositorory usuarioRepositorory)
+    public UsuarioController(UsuarioRepository usuarioRepositorory)
     {
         this.usuarioRepositorory = usuarioRepositorory;
     }
