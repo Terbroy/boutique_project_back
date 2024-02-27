@@ -1,5 +1,6 @@
 package com.boutiqueProject.Controller;
 
+import com.boutiqueProject.Entity.UsuarioEntity;
 import com.boutiqueProject.Repository.UsuarioRepositorory;
 import org.springframework.web.bind.annotation.*;
 

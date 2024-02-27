@@ -16,6 +16,7 @@ public class Carrito {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+    @Column(name = "total")
     private BigDecimal total;
     private Integer cantidadProducto;
 }
