@@ -1,53 +1,41 @@
 package com.boutiqueProject.Controller;
 
-import com.boutiqueProject.Repository.UsuarioRepository;
+
+import com.boutiqueProject.Entity.Productos;
+import com.boutiqueProject.Entity.Usuarios;
+import com.boutiqueProject.Service.UsuarioService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+import java.util.Optional;
 
 @RestController
-@RequestMapping("/usuarios")
+@RequestMapping(path = "api/v1/usuarios")
 
-public class UsuarioController
-{
-    private final UsuarioRepository usuarioRepositorory;
+public class UsuarioController {
 
-    public UsuarioController(UsuarioRepository usuarioRepositorory)
-    {
-        this.usuarioRepositorory = usuarioRepositorory;
-    }
+    @Autowired
+    private UsuarioService usuarioService;
 
     @GetMapping
-    public List<UsuarioEntity> obtenerUsuarios()
-    {
-        return usuarioRepositorory.findAll();
+    public List<Usuarios> getAll() {
+        return usuarioService.getUsuarios();
     }
 
-    @PostMapping
-    public UsuarioEntity crearUsuario(@RequestBody UsuarioEntity usuario)
-    {
-        return usuarioRepositorory.save(usuario);
+    @GetMapping("/{id}")
+    public Optional<Usuarios> getById(@PathVariable("id") Integer id) {
+        return usuarioService.getUsuario(id);
     }
 
-    @PutMapping("/{id}")
-    public UsuarioEntity actualizarProductos(@PathVariable Long id, @RequestBody UsuarioEntity usuario)
-    {
-        return usuarioRepositorory.findById(id).map(usuarioMap ->
-        {
-            usuarioMap.setNombre(usuario.getNombre());
-            usuarioMap.setApellido(usuario.getApellido());
-            usuarioMap.setEmail(usuario.getEmail());
-            usuarioMap.setTelefono(usuario.getTelefono());
-            usuarioMap.setDepartamento(usuario.getDepartamento());
-            usuarioMap.setRoles(usuario.getRoles());
-            return usuarioRepositorory.save(usuarioMap);
-        }).orElse(null);
+    @PostMapping("/{id}")
+    public void saveUpdate(@RequestBody Usuarios usuarios) {
+        usuarioService.saveOrUpdate(usuarios);
     }
 
     @DeleteMapping("/{id}")
-    public void borrarUsuario(@PathVariable Long id)
-    {
-        usuarioRepositorory.deleteById(id);
+    public void deleteUsuario(@PathVariable("id") Integer id) {
+        usuarioService.delete(id);
     }
+
 }
