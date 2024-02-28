@@ -13,10 +13,14 @@ import java.math.BigDecimal;
 @Data
 @Table(name="carrito")
 public class Carrito {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private Integer id;
     @Column(name = "total")
     private BigDecimal total;
+
+    @Column(name = "cantidadProducto")
     private Integer cantidadProducto;
 }
