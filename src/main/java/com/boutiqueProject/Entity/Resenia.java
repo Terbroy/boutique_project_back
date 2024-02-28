@@ -12,6 +12,8 @@ import lombok.NoArgsConstructor;
 public class Resenia {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id_resenias;
+
     private Integer id_resenia;
     private boolean calificacion;
     private String comentario;

@@ -31,7 +31,7 @@ public class Usuarios {
     @Column(name = "contraseña")
     private String contraseña;
 
-    @OneToMany
+    @OneToOne
     @JoinColumn(name = "id_carrito")
     private Carrito carrito;
 

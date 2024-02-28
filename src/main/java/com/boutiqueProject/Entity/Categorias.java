@@ -13,6 +13,7 @@ import lombok.NoArgsConstructor;
 public class Categorias {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id_categorias;
 
     @Column(name = "nombre")
     private String nombre;

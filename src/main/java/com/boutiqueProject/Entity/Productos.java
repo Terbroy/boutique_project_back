@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
@@ -13,6 +15,7 @@ public class Productos {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id_producto;
 
     @Column(name = "nombre")
     private String nombre;
@@ -35,5 +38,5 @@ public class Productos {
 
     @OneToMany
     @JoinColumn(name = "id_imagenes")
-    private Imagenes imagenes;
+    private List<Imagenes> imagenes;
 }
