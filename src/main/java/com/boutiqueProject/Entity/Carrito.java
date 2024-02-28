@@ -19,6 +19,7 @@ public class Carrito {
     private Integer id_carrito;
 
     private Integer id;
+
     @Column(name = "total")
     private BigDecimal total;
 
