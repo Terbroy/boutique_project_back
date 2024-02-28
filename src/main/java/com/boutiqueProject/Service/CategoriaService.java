@@ -1,14 +1,10 @@
 package com.boutiqueProject.Service;
 
 import com.boutiqueProject.Entity.Categorias;
-import com.boutiqueProject.Entity.Productos;
 import com.boutiqueProject.Repository.CategoriasRepository;
-import com.boutiqueProject.Repository.ProductoRepository;
-import jakarta.persistence.Id;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.management.loading.PrivateClassLoader;
 import java.util.List;
 import java.util.Optional;
 
@@ -18,7 +14,7 @@ public class CategoriaService {
     CategoriasRepository categoriasRepository;
 
 
-    public List<Productos> getcategorias(){
+    public List<Categorias> getcategorias(){
         return categoriasRepository.findAll(); // get
     }
     public Optional<Categorias> getProducto(String id){
