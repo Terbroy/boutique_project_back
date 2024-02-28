@@ -14,9 +14,16 @@ public class Resenia {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id_resenias;
 
-    private Integer id_resenia;
+    @Column(name = "id")
+    private Integer id;
+    @Column(name = "calificacion")
     private boolean calificacion;
+    @Column(name = "comentario")
     private String comentario;
-    private Integer id_usuario;
-    private Integer id_producto;
+    @ManyToOne
+    @JoinColumn(name = "id_usuario")
+    private Usuarios usuarios;
+    @ManyToOne
+    @JoinColumn(name = "id_producto")
+    private Productos productos;
 }
