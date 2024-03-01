@@ -24,7 +24,7 @@ public class ImagenesController {
         return  imagenesService.getImagen(id);
     }
 
-    @PostMapping("/{id}")
+    @PostMapping
     public void saveUpdate(@RequestBody Imagenes imagenes){
         imagenesService.saveOrUpdate(imagenes);
     }

@@ -25,7 +25,7 @@ public class ProductoController {
         return  productoService.getProducto(id);
     }
 
-    @PostMapping("/{id}")
+    @PostMappin
     public void saveUpdate(@RequestBody Productos productos){
         productoService.saveOrUpdate(productos);
     }
