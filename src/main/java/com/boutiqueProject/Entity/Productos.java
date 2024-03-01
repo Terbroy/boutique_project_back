@@ -15,7 +15,8 @@ public class Productos {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id_producto;
+    @Column(name = "id_productos")
+    private Integer id_productos;
 
     @Column(name = "nombre")
     private String nombre;
@@ -23,20 +24,14 @@ public class Productos {
     @Column(name = "precio")
     private Long precio;
 
-    @Column(name = "descripcion")
-    private String descripcion;
-
     @Column(name = "informacion")
     private String informacion;
 
-    @Column(name = "stock")
-    private Integer stock;
+    @Column(name = "descripcion")
+    private String descripcion;
 
     @ManyToOne
-    @JoinColumn(name = "id_categorias")
+    @JoinColumn(name = "categorias_id_categorias")
     private Categorias categorias;
 
-    @OneToMany
-    @JoinColumn(name = "id_imagenes")
-    private List<Imagenes> imagenes;
 }

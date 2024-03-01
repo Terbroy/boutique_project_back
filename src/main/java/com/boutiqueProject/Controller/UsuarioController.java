@@ -26,7 +26,7 @@ public class UsuarioController {
         return usuarioService.getUsuario(id);
     }
 
-    @PostMapping("/{id}")
+    @PostMapping
     public void saveUpdate(@RequestBody Usuarios usuarios) {
         usuarioService.saveOrUpdate(usuarios);
     }

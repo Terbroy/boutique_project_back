@@ -12,6 +12,7 @@ import lombok.NoArgsConstructor;
 public class Imagenes {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_imagenes")
     private Integer id_imagenes;
 
 
@@ -19,7 +20,6 @@ public class Imagenes {
     private String url;
 
     @ManyToOne
-    @JoinColumn(name = "id_productos")
+    @JoinColumn(name = "productos_id_productos")
     private Productos productos;
-
 }

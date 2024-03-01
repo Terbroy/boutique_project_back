@@ -16,12 +16,18 @@ public class Carrito {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_carrito")
+
     private Integer id_carrito;
 
-    private Integer id;
     @Column(name = "total")
     private BigDecimal total;
 
-    @Column(name = "cantidadProducto")
-    private Integer cantidadProducto;
+    @ManyToOne
+    @JoinColumn(name = "usuarios_id_usuario")
+    private Usuarios usuarios;
+
+    @ManyToOne
+    @JoinColumn(name = "productos_id_productos")
+    private Productos productos;
 }

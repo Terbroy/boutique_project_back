@@ -19,7 +19,9 @@ public class UsuarioService {
         return usuarioRepository.findById(id);
     }
 
-    public void saveOrUpdate(Usuarios usuarios) {usuarioRepository.save(usuarios); }
+    public void saveOrUpdate(Usuarios usuarios) {
+        usuarioRepository.save(usuarios);
+    }
 
     public void delete(Integer id) { usuarioRepository.deleteById(id); }
 }

@@ -15,8 +15,7 @@ public class Usuarios {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
-    @Column(name = "id")
+    @Column(name = "id_usuario")
     private Integer id;
 
     @Column(name = "nombre")
@@ -28,11 +27,7 @@ public class Usuarios {
     @Column(name = "correo")
     private String correo;
 
-    @Column(name = "contraseña")
-    private String contraseña;
-
-    @OneToOne
-    @JoinColumn(name = "id_carrito")
-    private Carrito carrito;
+    @Column(name = "clave")
+    private String clave;
 
 }

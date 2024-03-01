@@ -14,10 +14,10 @@ public class CategoriaService {
     CategoriasRepository categoriasRepository;
 
 
-    public List<Categorias> getcategorias(){
+    public List<Categorias> getCategorias(){
         return categoriasRepository.findAll(); // get
     }
-    public Optional<Categorias> getProducto(String id){
+    public Optional<Categorias> getCategoria(Integer id){
         return categoriasRepository.findById(id);
     }
 
@@ -25,7 +25,7 @@ public class CategoriaService {
         categoriasRepository.save(categorias); // post --> crear && put||patch --> actualizar
     }
 
-    public void delete(String id){
+    public void delete(Integer id){
         categoriasRepository.deleteById(id);// delete -->eliminar
     }
 
