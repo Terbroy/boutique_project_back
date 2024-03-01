@@ -15,18 +15,18 @@ public class CategoriaService {
 
 
     public List<Categorias> getCategorias(){
-        return categoriasRepository.findAll(); // get
+        return categoriasRepository.findAll();
     }
     public Optional<Categorias> getCategoria(Integer id){
         return categoriasRepository.findById(id);
     }
 
     public void saveOrUpdate(Categorias categorias){
-        categoriasRepository.save(categorias); // post --> crear && put||patch --> actualizar
+        categoriasRepository.save(categorias);
     }
 
     public void delete(Integer id){
-        categoriasRepository.deleteById(id);// delete -->eliminar
+        categoriasRepository.deleteById(id);
     }
 
 }
