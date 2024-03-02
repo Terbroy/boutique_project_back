@@ -1,4 +1,5 @@
 package com.boutiqueProject.Entity;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -32,6 +33,7 @@ public class Productos {
 
     @ManyToOne
     @JoinColumn(name = "categorias_id_categorias")
+    @JsonIgnore
     private Categorias categorias;
 
 }
