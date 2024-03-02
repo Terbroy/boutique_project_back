@@ -16,7 +16,7 @@ public class Imagenes {
     @Column(name = "id_imagenes")
     private Integer id_imagenes;
 
-    @Column(name = "url", length =500 )
+    @Column(name = "url", length =200 )
     private String url;
 
     @ManyToOne
