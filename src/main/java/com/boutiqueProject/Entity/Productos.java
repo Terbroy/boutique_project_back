@@ -31,7 +31,7 @@ public class Productos {
     private String descripcion;
 
     @ManyToOne
-    @JoinColumn(name = "categorias_id_categorias")
+    @JoinColumn(name = "FKgk50jrsasb7d8aku8abw62dlg")
     private Categorias categorias;
 
 }
