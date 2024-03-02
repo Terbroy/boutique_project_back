@@ -1,6 +1,7 @@
 package com.boutiqueProject.Entity;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIdentityReference;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -31,6 +32,7 @@ public class Categorias {
     private String descripcion;
 
     @OneToMany(mappedBy = "categorias")
+    @JsonIdentityReference(alwaysAsId = true)
     private List<Productos> productos;
 
 }

@@ -1,5 +1,6 @@
 package com.boutiqueProject.Entity;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIdentityReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.persistence.*;
@@ -41,6 +42,7 @@ public class Productos {
     private List<Imagenes> imagenes;
     @ManyToOne
     @JoinColumn(name = "categorias_id_categorias")
+    @JsonIdentityReference(alwaysAsId = true)
     private Categorias categorias;
 
 }
