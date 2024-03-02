@@ -33,7 +33,6 @@ public class Productos {
 
     @ManyToOne
     @JoinColumn(name = "categorias_id_categorias")
-    @JsonIgnore
     private Categorias categorias;
 
 }
