@@ -1,5 +1,7 @@
 package com.boutiqueProject.Entity;
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -11,6 +13,10 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
+@JsonIdentityInfo(
+        generator = ObjectIdGenerators.PropertyGenerator.class,
+        property = "id_categorias"
+)
 @Table(name="productos")
 public class Productos {
 
@@ -31,6 +37,8 @@ public class Productos {
     @Column(name = "descripcion")
     private String descripcion;
 
+    @OneToMany(mappedBy = "productos")
+    private List<Imagenes> imagenes;
     @ManyToOne
     @JoinColumn(name = "categorias_id_categorias")
     private Categorias categorias;

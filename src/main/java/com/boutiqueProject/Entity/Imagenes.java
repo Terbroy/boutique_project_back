@@ -20,6 +20,10 @@ public class Imagenes {
     private String url;
 
     @ManyToOne
+    @JoinColumn(name = "categorias_id_categorias")
+    private Categorias categorias;
+
+    @ManyToOne
     @JoinColumn(name = "productos_id_productos")
     private Productos productos;
 }
