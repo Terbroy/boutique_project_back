@@ -34,7 +34,7 @@ public class Productos {
     @Column(name = "informacion")
     private String informacion;
 
-    @Column(name = "descripcion", length =500 )
+    @Column(name = "descripcion", length = 255 )
     private String descripcion;
 
     @OneToMany(mappedBy = "productos")

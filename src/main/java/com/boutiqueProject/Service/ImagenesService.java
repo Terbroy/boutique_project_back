@@ -12,7 +12,7 @@ public class ImagenesService {
     @Autowired
     ImagenesRepository imagenesRepository;
 
-        public List<Imagenes> getImagen(){
+    public List<Imagenes> getImagen(){
         return imagenesRepository.findAll(); // get
     }
     public Optional<Imagenes> getImagen(Integer id){
