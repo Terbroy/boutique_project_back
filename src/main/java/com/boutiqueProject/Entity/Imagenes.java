@@ -3,6 +3,7 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.engine.jdbc.Size;
 
 @Entity
 @NoArgsConstructor
@@ -15,13 +16,8 @@ public class Imagenes {
     @Column(name = "id_imagenes")
     private Integer id_imagenes;
 
-
-    @Column(name = "url")
+    @Column(name = "url", length =500 )
     private String url;
-
-    @ManyToOne
-    @JoinColumn(name = "categorias_id_categorias")
-    private Categorias categorias;
 
     @ManyToOne
     @JoinColumn(name = "productos_id_productos")
