@@ -15,7 +15,7 @@ import java.util.List;
 @Data
 @JsonIdentityInfo(
         generator = ObjectIdGenerators.PropertyGenerator.class,
-        property = "id_categorias"
+        property = "id_productos"
 )
 @Table(name="productos")
 public class Productos {
