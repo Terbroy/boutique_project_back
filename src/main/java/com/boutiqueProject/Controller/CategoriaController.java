@@ -27,13 +27,13 @@ public class CategoriaController {
         return  categoriaService.getCategoria(id);
     }
 
-    @PostMapping
+    @PostMapping("/post")
     public void saveUpdate(@RequestBody Categorias categorias){
         categoriaService.saveOrUpdate(categorias);
     }
 
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("delete/{id}")
     public void delete(@PathVariable("id") Integer id){
         categoriaService.delete(id);
     }
